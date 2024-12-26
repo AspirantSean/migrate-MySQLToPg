@@ -1,0 +1,32 @@
+{
+  "channel" : "3",
+  "source": {
+    "mysql_host": "192.168.34.188",
+    "mysql_port": "3306",
+    "mysql_username": "--",
+    "mysql_password": "--",
+    "schema" : "SCHEMA"
+  },
+  "target": {
+    "hg_host": "192.168.34.224",
+    "hg_port": "5866",
+    "hg_username": "--",
+    "hg_password": "--&",
+    "hg_database" : "DATABASE",
+    "schema" : "SCHEMA"
+  },
+  "mappings": [
+    {
+      "source":{
+        "column": ["column1","column1"],
+        "table":"table1"
+      },
+      "target":{
+        "column": ["column1","column1"],
+        "table":"table1",
+        "pre_sql" : ["truncate table table1;"]
+      },
+      "remark" : "表名"
+    }
+  ]
+}
